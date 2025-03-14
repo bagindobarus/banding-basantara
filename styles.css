@@ -7,11 +7,9 @@ svg {
     max-height: 100%;
     width: auto;
     height: auto;
+    margin: 50px;
+    margin-top: 0;
   }
-
-.tooltip-trigger {
-  fill: #1b242d;
-}
 
 .tooltip-trigger:hover {
   fill: #ffffff;
@@ -63,9 +61,39 @@ svg {
     text-align: center;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
+  color: white;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 5;
+    transform: translate(0, 0) rotate(0.001deg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--gap-padding) / 2) calc(var(--gap-padding) / 2);
+}
+
+.title-in{
+  margin: 0 50px;
+}
+
+.lang-family{
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 50px;
+  padding-right: 70px;
+  list-style-type: none;
+  color: white;
+  margin: 0;
 }
 
 label {
@@ -135,7 +163,7 @@ th {
 
 .social a {
   font-size: 24px;
-  background: #757575;
+  background: rgb(56, 61, 82);
   width: 40px;
   height: 40px;
   line-height: 38px;
@@ -156,4 +184,80 @@ th i {
   font-size: 0.8em; /* Make the note text smaller */
   color: #666; /* Make the note text lighter */
   font-style: italic; /* Ensure the text is italic */
+}
+
+footer{
+  margin-bottom: 20px;
+}
+
+.lang-family {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove default padding */
+}
+
+.lang-family li {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the list item */
+  padding-left: 30px; /* Add space for the colored square */
+  margin-bottom: 10px; /* Add spacing between list items */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.lang-family li::before {
+  content: ''; /* Required for the pseudo-element */
+  position: absolute; /* Position the square absolutely */
+  left: 0; /* Align the square to the left */
+  top: 50%; /* Center the square vertically */
+  transform: translateY(-50%); /* Adjust for exact vertical centering */
+  width: 20px; /* Size of the square */
+  height: 20px; /* Size of the square */
+  background-color: #000; /* Default color (will be overridden for each item) */
+  border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+/* Assign distinct colors to each list item */
+.lang-family li:nth-child(2)::before {
+  background-color: #17743F; /* Yellow for Melayu-Polinesia Barat */
+}
+
+.lang-family li:nth-child(3)::before {
+  background-color: #FFC700; /* Blue for Borneo Utara Raya */
+}
+
+.lang-family li:nth-child(4)::before {
+  background-color: #00aeff; /* Purple for Melayu-Polinesia Tengah */
+}
+
+.lang-family li:nth-child(5)::before {
+  background-color: #fd0002; /* Pink for Filipina */
+}
+
+.lang-family li:nth-child(6)::before {
+  background-color: #ff00ff; /* Green for Halmahera Selatan */
+}
+
+@media only screen and (max-width: 768px) {
+  .top{
+    display: block;
+  }
+
+  .title-in{
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .lang-family{
+    margin: 0 100px;
+    padding: 0;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+
+  li{
+    font-size: 10px;
+  }
 }
