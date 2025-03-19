@@ -11,6 +11,49 @@ svg {
     margin-top: 0;
   }
 
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Flag Image Styling */
+.flag {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Add spacing between flags */
+}
+
 .tooltip-trigger:hover {
   fill: #ffffff;
   transition: 0.3s;
@@ -59,6 +102,7 @@ svg {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 50px;
 }
 
 h1, h2, h3, p {
@@ -83,11 +127,11 @@ h1 {
     padding: calc(var(--gap-padding) / 2) calc(var(--gap-padding) / 2);
 }
 
-.title-in{
-  margin: 0 50px;
+.left{
+  margin-left: 50px;
 }
 
-.lang-family{
+.rumpun{
   font-family: 'Open Sans', sans-serif;
   padding-top: 50px;
   padding-right: 70px;
@@ -190,19 +234,19 @@ footer{
   margin-bottom: 20px;
 }
 
-.lang-family {
+.rumpun {
   list-style-type: none; /* Remove default bullet points */
   padding-left: 0; /* Remove default padding */
 }
 
-.lang-family li {
+.rumpun li {
   position: relative; /* Ensure the pseudo-element is positioned relative to the list item */
   padding-left: 30px; /* Add space for the colored square */
   margin-bottom: 10px; /* Add spacing between list items */
   font-size: 16px; /* Adjust font size as needed */
 }
 
-.lang-family li::before {
+.rumpun li::before {
   content: ''; /* Required for the pseudo-element */
   position: absolute; /* Position the square absolutely */
   left: 0; /* Align the square to the left */
@@ -215,23 +259,23 @@ footer{
 }
 
 /* Assign distinct colors to each list item */
-.lang-family li:nth-child(2)::before {
+.rumpun li:nth-child(2)::before {
   background-color: #17743F; /* Yellow for Melayu-Polinesia Barat */
 }
 
-.lang-family li:nth-child(3)::before {
+.rumpun li:nth-child(3)::before {
   background-color: #FFC700; /* Blue for Borneo Utara Raya */
 }
 
-.lang-family li:nth-child(4)::before {
+.rumpun li:nth-child(4)::before {
   background-color: #00aeff; /* Purple for Melayu-Polinesia Tengah */
 }
 
-.lang-family li:nth-child(5)::before {
+.rumpun li:nth-child(5)::before {
   background-color: #fd0002; /* Pink for Filipina */
 }
 
-.lang-family li:nth-child(6)::before {
+.rumpun li:nth-child(6)::before {
   background-color: #ff00ff; /* Green for Halmahera Selatan */
 }
 
@@ -248,16 +292,16 @@ footer{
     font-size: 40px;
   }
 
-  .lang-family{
+  .rumpun{
     margin: 0 100px;
     padding: 0;
   }
 
   h2{
-    font-size: 20px;
+    font-size: 15px;
   }
 
-  li{
+  .rumpun li{
     font-size: 10px;
   }
 }
