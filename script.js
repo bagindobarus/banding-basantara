@@ -1,3 +1,24 @@
+// PASTE THIS FUNCTION AT THE TOP OF script.js
+function createPopup(id) {
+  const popupNode = document.querySelector(id);
+  if (!popupNode) return () => {}; // Return an empty function if popup not found
+  const overlay = popupNode.querySelector(".overlay");
+  const closeBtn = popupNode.querySelector(".close-btn");
+
+  function openPopup() {
+    popupNode.classList.add("active");
+  }
+
+  function closePopup() {
+    popupNode.classList.remove("active");
+  }
+
+  if (overlay) overlay.addEventListener("click", closePopup);
+  if (closeBtn) closeBtn.addEventListener("click", closePopup);
+
+  return openPopup;
+}
+
 // Tooltip Logic (remains the same)
 const tooltip = document.getElementById("tooltip");
 const tooltipImg = tooltip.querySelector("img");
@@ -122,4 +143,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // --- ADD THIS AT THE END, INSIDE THE LISTENER ---
+    const popup = createPopup("#popup");
+    const openPopupBtn = document.querySelector("#open-popup-btn");
+    
+    if (openPopupBtn) {
+        openPopupBtn.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevents the link from jumping to the top of the page
+            popup(); // This calls the openPopup function
+        });
+    }
 });
