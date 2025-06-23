@@ -1,5 +1,6 @@
 body {
   background: url(img/serumpun-background.png);
+  background-size:cover;
 }
 
 svg {
