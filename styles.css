@@ -375,7 +375,7 @@ footer{
   border-radius: 5px;
 }
 
-/* REPLACE THE OLD RULES for the selection footer with this block */
+/* SELECTED FLAGS APPEAR */
 
 /* This is the main container for flags and the button */
 #selection-footer {
@@ -402,6 +402,8 @@ footer{
     position: relative;
     display: flex;
     align-items: center;
+  /* ADD THIS LINE to apply the animation */
+    animation: flag-appear 0.5s ease forwards;
 }
 
 /* This styles the flag image itself */
@@ -453,4 +455,16 @@ footer{
 /* Container for the compare button */
 #compare-button-container {
     text-align: center;
+}
+
+/* SELECTED FLAGS ANIMATION */
+@keyframes flag-appear {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Start 30px below its final position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);   /* End at its normal position */
+  }
 }
