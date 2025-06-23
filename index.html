@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,18 @@
    <link rel="icon" type="image/x-icon" href="img/android-chrome-192x192.png">
 </head>
 <body>
+   <nav>
+  <div class="navbar-container">
+    <div class="logo" style="text-align: center; padding-top: 5px;" width="200">
+   <img alt="Media Serumpun" class="logo light-mode" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYObmUQ_ZKWUzMsoaR5UB-_fOL1PjFZ2N8f5daSe5_b16fcclJrhBEzxAIdQNcT68MlmTZiyWuLkoUPWwmtk3Zv9y6iUft2lmeQR-BKYKuDakndpLHkIEvUWoM0LneYMrWhAZoWF6xILS9-AyLLTJbw8UoJPG3zz3zxzdlrj9N2tblBSoWErMUk22ZUDkO/w200-h34/20220611_085556.png">
+   </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Utama</a></li>
+      <li><a href="#" id="open-popup-btn">Pilih Daerah</a></li>
+      <li><a href="https://www.deviantart.com/ibnuamril/gallery/97348663/bahasa" target="_blank">Galeri</a></li>
+   </ul>
+  </div>
+</nav>
    <div class="top">
       <div class="left">
          <h1 class="title-in" style="margin-bottom: 0px;">Banding Bahasa Nusantara</h1>
@@ -169,5 +182,24 @@
    <p class="copyright"> ©2025 Media Serumpun</p>
    </footer>
  <script src="script.js"></script>
+ <div class="popup" id="popup">
+  <div class="overlay"></div>
+  <div class="popup-content">
+    <div class="close-btn">&times;</div>
+    <div class="widget-content">
+      <div class="country-list">
+      <div class="button-idn">
+        <a href="#" target="blank"> 
+          <button class="country-button">
+            <span class="flag-map">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_map_of_North_Sumatra_Province.png/250px-Flag_map_of_North_Sumatra_Province.png" style="width: 100px;">
+            </span>
+            <span class="country-name"> Sumatera Utara </span>
+          </button>
+        </a>
+    </div>
+    <h1 style="text-align:center">Pilih Daerah</h1>
+  </div>
+</div>
 </body>
 </html>
