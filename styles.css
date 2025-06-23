@@ -218,6 +218,18 @@ th {
   opacity: 0.75;
 }
 
+.social:hover {
+  fill: #ffffff;
+transition: 0.3s;
+cursor: pointer;
+}
+
+.social-logo:hover {
+  fill: #323a42;
+transition: 0.3s;
+cursor: pointer;
+}
+
 .copyright {
   margin-top: 15px;
   text-align: center;
@@ -304,4 +316,140 @@ footer{
   .rumpun li{
     font-size: 10px;
   }
+}
+
+.selected-languages-container {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flag-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.flag-icon {
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.remove-flag {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.compare-button {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none;
+  border-radius: 5px;
+}
+
+/* REPLACE THE OLD RULES for the selection footer with this block */
+
+/* This is the main container for flags and the button */
+#selection-footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Position in the bottom-right corner */
+    display: flex;
+    flex-direction: column; /* This makes flags appear ON TOP of the button */
+    align-items: center;  /* Center items horizontally */
+    gap: 15px;            /* Space between flags and button */
+    z-index: 1000;
+}
+
+/* This is the container for the flags */
+#selected-flags-container {
+    display: flex;
+    gap: 15px; /* Adds space between flags */
+    justify-content: center;
+    min-height: 40px; /* Use min-height to avoid collapsing when empty */
+}
+
+/* This is the wrapper for each flag and its 'X' button */
+.selected-flag {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* This styles the flag image itself */
+.selected-flag img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    background-color: #555; /* Fallback color for broken images */
+}
+
+/* This styles the 'X' button to remove a flag */
+.remove-flag {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    color: black;
+    border: 1px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.remove-flag:hover {
+    background: #eee;
+}
+
+/* We need to remove the old positioning from the button itself */
+#compare-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Container for the compare button */
+#compare-button-container {
+    text-align: center;
 }
