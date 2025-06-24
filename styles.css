@@ -76,7 +76,8 @@ svg {
   }
   
   #tooltip img {
-    max-height: 100px;
+    max-width: 100px;
+    padding-bottom: 5px;
   }
   
   #tooltip p {
@@ -130,6 +131,7 @@ h1 {
 
 .left{
   margin-left: 50px;
+  padding-right: 50px;
 }
 
 .rumpun{
@@ -485,7 +487,6 @@ nav {
   display: flex;
   justify-content: space-between; /* Pushes logo and links to opposite ends */
   align-items: center;
-  max-width: 1200px; /* Or your preferred site width */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -517,11 +518,6 @@ nav .nav-links li a {
 nav .nav-links li a:hover {
   background-color: #f0f0f0; /* Highlight effect on hover */
   color: #111;
-}
-
-/* Add some space between the new navbar and the title below it */
-.top {
-  margin-top: 30px;
 }
 
 /* ADD ALL OF THESE STYLES TO THE END OF styles.css */
